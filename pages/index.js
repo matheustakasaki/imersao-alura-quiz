@@ -4,6 +4,7 @@ import Widget from '../src/components/Widget'
 import Footer from '../src/components/Footer'
 import GitHubCorner from '../src/components/GitHubCorner'
 import QuizBackground from '../src/components/QuizBackground'
+import Head from 'next/head'
 
 const Title = styled.h1`
   font-size: 50px;
@@ -30,6 +31,14 @@ export const QuizContainer = styled.div`
 
 export default function Home() {
   return (
+  <>
+      <Head>
+        <title>Quiz</title>
+        <meta property="og:title" content="Taka - Next.js" key="title" />
+        <meta property="og:description" content="Site elaborado com as tecnologias do react.js e next.js"/>
+        <meta property="og:image" content="https://i2.wp.com/css-tricks.com/wp-content/uploads/2017/06/css-is-awesome-scaled.jpg?resize=1536%2C1208&ssl=1" />
+      </Head>
+
     <QuizBackground backgroundImage={db.bg}>
       <QuizContainer>
       <Widget>
@@ -48,8 +57,9 @@ export default function Home() {
         </Widget.Content>
       </Widget>
       <Footer/>
-    </QuizContainer>
-    <GitHubCorner projectUrl="https://github.com/matheustakasaki"/>
+      </QuizContainer>
+      <GitHubCorner projectUrl="https://github.com/matheustakasaki"/>
     </QuizBackground>
+  </>
   );
 }
