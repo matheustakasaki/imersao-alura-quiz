@@ -37,7 +37,7 @@ export default function Home() {
           <h1> Olá! Essa é uma aplicação React </h1>
         </Widget.Header>
         <Widget.Content>
-          <p> Lorem ipsum dorem itmus. </p>
+          <p> Lorem oasdi dorem itmus. </p>
         </Widget.Content>
       </Widget>
 
